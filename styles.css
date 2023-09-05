@@ -1,0 +1,288 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    height: 100px;
+}
+
+.logo{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    height: 45px;
+    width: auto;
+}
+
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffae42;
+}
+
+
+/* Slideshow container */
+.slideshow {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Individual slide items */
+.slide {
+    flex: 0 0 100%;
+    height: 800px;
+    transition: transform 1s ease-in-out;
+    animation: slide 12s infinite;
+    position: relative;
+}
+
+/* Slide image styles */
+.slide img {
+    width: 100%;
+}
+
+/* Slide text styles */
+.slideshow-text {
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    transition: smooth; 
+}
+
+/* Show text caption on hover */
+.slide:hover .slideshow-text {
+    opacity: 1;
+}
+
+/* CSS Animation Keyframes */
+@keyframes slide {
+
+    0%,30% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    40%,60% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    70%,100% {
+        transform: translateX(-200%);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Featured Services */
+#services{
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.featured-services {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.featured-service img{
+    width: 250px;
+    height: 300px;
+
+}
+
+.featured-service {
+    margin: 20px;
+    box-shadow : 5px 5px 10px gray;
+
+}
+
+/* About Us */
+.about-us {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about-us p {
+    font-size: 20px;
+}
+
+/* Latest Blogs */
+#blogs{
+    text-align: center;
+}
+.latest-blogs {
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.blog-post {
+    margin: 20px;
+    border: 3px solid red;
+    width: 300px;
+    height: 290px;
+    display: flex;
+    align-items: center;
+
+}
+
+.blog-post img{
+    width: 250px;
+    height: 150px;
+    box-shadow: 5px 5px 13px 3px gray;
+}
+
+/* Brand Partners */
+#partners{
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.brand-partners {
+    background-color: #fff;
+    height:250px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.brand-logo {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: first ;
+    /* border: 3px solid black; */
+    box-shadow: 5px 5px 3px gray;
+}
+.brand-logo img{
+    width: auto;
+    height: 150px;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: #f4f4f4;
+    text-align: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 50%;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    height: 25px;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #ffae42;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+
+.follow img{
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.links a{
+    color: white;
+}
+.links a:hover{
+    /* color: white; */
+    color: #ffae42;;
+}
+/* WhatsApp Floating Icon */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #25d366;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
